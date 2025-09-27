@@ -241,10 +241,13 @@ export default function Home() {
                     viewport={{ once: true }}
                     className="mb-12"
                   >
-                    <p className="text-xl md:text-2xl font-light text-white/90 max-w-3xl mx-auto leading-relaxed">
-                      The influencer marketing agency that delivers{" "}
-                      <span className="font-semibold bg-gradient-to-r from-cyan-200 to-purple-200 bg-clip-text text-transparent">
-                        real results
+                    <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-white/95 max-w-4xl mx-auto leading-relaxed">
+                      <span className="bg-gradient-to-r from-cyan-200 via-white to-purple-200 bg-clip-text text-transparent drop-shadow-lg">
+                        Amplify your brand,
+                      </span>
+                      <br />
+                      <span className="bg-gradient-to-r from-purple-200 via-pink-200 to-cyan-200 bg-clip-text text-transparent drop-shadow-lg">
+                        influence the world.
                       </span>
                     </p>
                   </motion.div>

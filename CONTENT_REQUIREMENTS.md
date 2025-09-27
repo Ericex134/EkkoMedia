@@ -20,6 +20,12 @@ This document outlines all the content, images, videos, and information that the
   - Resolution: 1920x1080 minimum
   - File size: Optimized for web (under 10MB)
 
+- **Hero Slogan**
+  - **Current Slogan**: "Amplify your brand, influence the world."
+  - **Design**: Large, gradient text with modern typography
+  - **Styling**: Split across two lines with different gradient colors
+  - **Animation**: Smooth fade-in with staggered timing
+
 ### **Brand Logos Section**
 
 - **Client Brand Assets**
