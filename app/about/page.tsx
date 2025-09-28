@@ -2,109 +2,39 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import {
-  Calendar,
-  Users,
-  Target,
-  Award,
-  Globe,
-  TrendingUp,
-} from "lucide-react";
+import { Users, Target, Globe, TrendingUp } from "lucide-react";
 
 export default function About() {
-  const timeline = [
-    {
-      year: "2015",
-      title: "The Beginning",
-      description:
-        "Our founder started working with YouTube content creators and brand collaborations, building the foundation of what would become Ekko Media.",
-    },
-    {
-      year: "2018",
-      title: "Ekko Media Founded",
-      description:
-        "Officially launched Ekko Media as one of the first movers in the influencer marketing space, focusing on male audience engagement.",
-    },
-    {
-      year: "2019",
-      title: "First Major Campaigns",
-      description:
-        "Delivered our first major influencer marketing campaigns, establishing relationships with top-tier creators and brands.",
-    },
-    {
-      year: "2020",
-      title: "Global Expansion",
-      description:
-        "Expanded our operations globally, working with brands across 18 countries and multiple languages.",
-    },
-    {
-      year: "2021",
-      title: "Award Recognition",
-      description:
-        "Received our first industry awards, including recognition from GIMA and Social Day for excellence in influencer marketing.",
-    },
-    {
-      year: "2022",
-      title: "Platform Innovation",
-      description:
-        "Launched our data-driven influencer platform with access to insights on over 250M influencer profiles.",
-    },
-    {
-      year: "2023",
-      title: "Forbes Recognition",
-      description:
-        "Our founder was featured in Forbes, highlighting our innovative approach to influencer marketing and brand partnerships.",
-    },
-    {
-      year: "2024",
-      title: "Industry Leadership",
-      description:
-        "Established ourselves as leaders in the space, trusted by 100+ brands to deliver exceptional influencer marketing results.",
-    },
-  ];
-
   const values = [
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Results-Driven",
+      title: "Integrity First",
       description:
-        "We focus on delivering measurable results that move the needle for our clients' businesses.",
+        "We believe trust is the foundation of every partnership. We act transparently and honor every commitment — with brands, creators, and audiences alike.",
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Creator-First",
+      title: "Creator-Centric Approach",
       description:
-        "We prioritize authentic relationships with creators, ensuring genuine partnerships that resonate with audiences.",
+        "Creators aren’t just media slots — they’re partners. We treat them with respect so they can represent your brand authentically and sustainably.",
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Innovation",
+      title: "Results With Accountability",
       description:
-        "We stay ahead of trends and leverage cutting-edge technology to deliver innovative solutions.",
+        "Every dollar matters. We back strategy with data, measure outcomes, and take responsibility for delivering real impact.",
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Global Reach",
+      title: "Agility Over Bureaucracy",
       description:
-        "Our international presence allows us to execute campaigns across multiple markets and cultures.",
-    },
-  ];
-
-  const achievements = [
-    {
-      icon: <Award className="w-6 h-6" />,
-      title: "4x Award-Winners",
-      organization: "GIMA",
+        "The digital space moves fast — and so do we. We adapt quickly, solve problems directly, and keep campaigns moving without unnecessary delays.",
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Featured Founder",
-      organization: "Forbes",
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Award Winning Agency",
-      organization: "Social Day",
+      icon: <Globe className="w-8 h-8" />,
+      title: "Long-Term Thinking",
+      description:
+        "We build relationships, not transactions. Whether with creators or brands, our goal is to create scalable, lasting partnerships that grow in value over time.",
     },
   ];
 
@@ -231,21 +161,24 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Since 2018, Ekko Media has been driving forward creative
-                influencer marketing campaigns backed by data, cementing
-                ourselves as leaders in the space. Our strategies break through
-                the noise and allow our brands and influencers to captivate the
-                hearts of the everyday consumer.
+                Ekko Media is a global influencer marketing agency, operating in
+                both Hong Kong and the United Kingdom. Our mission is to bridge
+                the gap between brands and creators, to create a seamless
+                transition into producing highly engaging and impactful content
+                for brands.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                In a fast-paced world, we simplify the complexity of social
-                media and influencer marketing and deliver solutions to brands'
-                problems. We believe in crafting excellence and leading brands
-                trust us to deliver results globally.
+                Influencer marketing in this modern day of age is the most
+                powerful tool to raise your brands awareness, we help these
+                brands navigate the complicated world and wild west that is
+                social media.
               </p>
-              <Link href="/services" className="btn-primary text-lg px-8 py-4">
-                Explore Our Services
-              </Link>
+              <a
+                href="mailto:josh@ekkomedia.net"
+                className="btn-primary text-lg px-8 py-4"
+              >
+                Get In Touch
+              </a>
             </motion.div>
 
             <motion.div
@@ -270,7 +203,7 @@ export default function About() {
 
       {/* Values Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -287,7 +220,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
             {values.map((value, index) => (
               <motion.div
                 key={index}
@@ -312,144 +245,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Journey
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From our founding in 2018 to becoming industry leaders, here's how
-              we've grown and evolved.
-            </p>
-          </motion.div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary-200"></div>
-
-            <div className="space-y-16">
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`flex items-center ${
-                    index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                  }`}
-                >
-                  <div
-                    className={`w-1/2 ${
-                      index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
-                    }`}
-                  >
-                    <div className="bg-white rounded-xl shadow-lg p-8">
-                      <div className="flex items-center mb-4">
-                        <Calendar className="w-5 h-5 text-primary-600 mr-2" />
-                        <span className="text-primary-600 font-bold text-lg">
-                          {item.year}
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Timeline dot */}
-                  <div className="relative z-10 w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-lg"></div>
-
-                  <div className="w-1/2"></div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Achievements Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Recognition & Awards
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our commitment to excellence has been recognized by industry
-              leaders and organizations.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center"
-              >
-                <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 mx-auto mb-6">
-                  {achievement.icon}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {achievement.title}
-                </h3>
-                <p className="text-primary-600 font-semibold">
-                  {achievement.organization}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { number: "6+", label: "Years of Experience" },
-              { number: "100+", label: "Brands Served" },
-              { number: "18", label: "Countries" },
-              { number: "250M+", label: "Influencer Profiles" },
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-primary-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -467,18 +262,12 @@ export default function About() {
               marketing results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <a
+                href="mailto:josh@ekkomedia.net"
                 className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg"
               >
                 Get In Touch
-              </Link>
-              <Link
-                href="/work"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 text-lg"
-              >
-                View Our Work
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

@@ -64,32 +64,7 @@ const Footer = () => {
             {/* EXPLORE */}
             <div>
               <h3 className="text-white font-bold text-lg mb-4">EXPLORE</h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="/services"
-                    className="text-white/80 hover:text-white transition-colors duration-300"
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/talent"
-                    className="text-white/80 hover:text-white transition-colors duration-300"
-                  >
-                    Talent
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/work"
-                    className="text-white/80 hover:text-white transition-colors duration-300"
-                  >
-                    Work
-                  </Link>
-                </li>
-              </ul>
+              <ul className="space-y-3"></ul>
             </div>
 
             {/* CONNECT */}
@@ -105,12 +80,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/contact"
+                  <a
+                    href="mailto:josh@ekkomedia.net"
                     className="text-white/80 hover:text-white transition-colors duration-300"
                   >
                     Contact Us
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <Link

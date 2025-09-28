@@ -19,9 +19,6 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Talent", href: "/talent" },
-    { name: "Work", href: "/work" },
   ];
 
   return (
@@ -50,9 +47,9 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Link href="/contact" className="btn-primary">
+            <a href="/contact" className="btn-primary">
               Contact Us
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -81,13 +78,13 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Link
-                  href="/contact"
+                <a
+                  href="mailto:josh@ekkomedia.net"
                   className="btn-primary w-full text-center block"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact Us
-                </Link>
+                </a>
               </div>
             </div>
           </div>
