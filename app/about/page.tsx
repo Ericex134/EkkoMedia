@@ -133,7 +133,7 @@ export default function About() {
               Discover the journey that made Ekko Media the go-to influencer
               agency for{" "}
               <span className="text-cyan-300 font-semibold">
-                male audience engagement
+                audience engagement
               </span>{" "}
               and authentic brand partnerships.
             </motion.p>
