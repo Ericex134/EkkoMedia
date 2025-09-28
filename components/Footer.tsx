@@ -33,8 +33,14 @@ const Footer = () => {
           <div className="space-y-8">
             {/* Logo */}
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">E</span>
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg">
+                <img
+                  src="/images/logo.png"
+                  alt="EKKO MEDIA"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain rounded-xl"
+                />
               </div>
               <span className="text-3xl font-bold text-white">EKKO MEDIA</span>
             </div>

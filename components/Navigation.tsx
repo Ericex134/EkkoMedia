@@ -31,6 +31,15 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg">
+              <img
+                src="/images/logo.png"
+                alt="EKKO MEDIA"
+                width={48}
+                height={48}
+                className="w-full h-full object-contain rounded-xl"
+              />
+            </div>
             <div className="text-2xl font-bold text-primary-600">
               EKKO MEDIA
             </div>
