@@ -16,6 +16,7 @@ import {
   Linkedin,
   Youtube,
 } from "lucide-react";
+import { BRANDS, TESTIMONIALS, FAQ_DATA } from "../lib/constants";
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -68,38 +69,6 @@ export default function Home() {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  const faqData = [
-    {
-      question: "Why influencer marketing?",
-      answer:
-        "With the creator economy being valued at 21 billion USD and growing, influencer marketing is a must for brands trying to capitalise on new marketing strategies to tap into the lucrative Gen Z audience.",
-    },
-    {
-      question: "How can I ensure creators are going to post?",
-      answer:
-        "We ensure that our campaigns are carried out and maintained by legally binding contracts to the creators. Meaning creators are legally obligated to post, our team proofreads and ensures that these contracts are safe for all parties.",
-    },
-    {
-      question: "What even is influencer marketing?",
-      answer:
-        "It is a form of social media marketing that influencers use to promote products/services of brands. Influencer marketing comes in different forms, such as gifting, seeding and your typical paid partnership.",
-    },
-    {
-      question: "What is an influencer?",
-      answer:
-        "An influencer is a user that can range from any following, even as low as the 100s! However, influencers are typically categories by their size, ranging from: nano, micro, macro and mega creators. Our network covers creators from all ranges, allowing us to be very flexible with not only rates, but also account size!",
-    },
-    {
-      question: "What are some key metrics to determine success?",
-      answer:
-        "This really depends on your goals and what you are prioritising. If you're trying to focus on sales, obviously ROI, sales generated and conversation rates from influencer landing pages are all great ways. For brand awareness, it could range from metrics such as impressions, aROI, EMV as well as the general audience sentiment. If you're trying to prioritise content generation, it could range from number of creatives produced, number of creatives with organic usage obtained, audience sentiment, cost per asset.",
-    },
-    {
-      question: "How does the whole process look like?",
-      answer:
-        "We begin by establishing our partnership. Typically we try to understand the type of KPI's and results you're trying to achieve. We then move onto pitching our creators. From there we handle all legal related things with our creators, and ensure content is posted on time, meeting your deadlines. We then enter a review period, trying to understand how effective the content was. From there we continuously optimise and try to establish long term and high ROI partnerships.",
-    },
-  ];
 
   return (
     <>
@@ -339,25 +308,7 @@ export default function Home() {
                     key={setIndex}
                     className="flex space-x-8 items-center flex-shrink-0"
                   >
-                    {[
-                      { name: "Netflix", color: "from-red-500 to-red-600" },
-                      { name: "Ubisoft", color: "from-blue-600 to-blue-700" },
-                      {
-                        name: "Revolut",
-                        color: "from-purple-500 to-purple-600",
-                      },
-                      {
-                        name: "Hostinger",
-                        color: "from-orange-500 to-orange-600",
-                      },
-                      {
-                        name: "SandboxVR",
-                        color: "from-green-500 to-green-600",
-                      },
-                      { name: "Spotify", color: "from-green-400 to-green-500" },
-                      { name: "Adobe", color: "from-red-400 to-red-500" },
-                      { name: "Figma", color: "from-purple-400 to-purple-500" },
-                    ].map((brand, i) => (
+                    {BRANDS.map((brand, i) => (
                       <motion.div
                         key={`${setIndex}-${i}`}
                         initial={{ opacity: 0, y: 20 }}
@@ -367,13 +318,28 @@ export default function Home() {
                         className="group relative"
                       >
                         <div className="bg-white/10 backdrop-blur-md border border-white/20 h-20 w-40 rounded-2xl flex items-center justify-center flex-shrink-0 hover:bg-white/20 hover:border-white/30 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl">
-                          {/* Brand logo placeholder */}
-                          <div
-                            className={`w-12 h-12 bg-gradient-to-br ${brand.color} rounded-xl flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300`}
-                          >
-                            <span className="text-white font-bold text-lg">
-                              {brand.name.charAt(0)}
-                            </span>
+                          {/* Brand logo */}
+                          <div className="w-12 h-12 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+                            <img
+                              src={brand.logo}
+                              alt={`${brand.name} logo`}
+                              className="w-full h-full object-contain filter brightness-0 invert"
+                              onError={(e) => {
+                                // Fallback to gradient if logo fails to load
+                                const target = e.target as HTMLImageElement;
+                                target.style.display = 'none';
+                                const fallback = target.nextElementSibling as HTMLElement;
+                                if (fallback) fallback.style.display = 'flex';
+                              }}
+                            />
+                            {/* Fallback gradient logo */}
+                            <div
+                              className={`w-full h-full bg-gradient-to-br ${brand.color} rounded-xl items-center justify-center hidden`}
+                            >
+                              <span className="text-white font-bold text-lg">
+                                {brand.name.charAt(0)}
+                              </span>
+                            </div>
                           </div>
                           <span className="text-white font-semibold text-sm group-hover:text-white/90 transition-colors duration-300">
                             {brand.name}
@@ -1308,7 +1274,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="space-y-4"
               >
-                {faqData.map((faq, index) => (
+                {FAQ_DATA.map((faq, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}

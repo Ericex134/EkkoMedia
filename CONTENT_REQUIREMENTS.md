@@ -9,6 +9,7 @@ This document outlines all the content, images, videos, and information that the
 ### **Hero Section**
 
 - **Video Content**
+
   - High-quality hero video (MP4 format)
   - Video should showcase:
     - Team members working
