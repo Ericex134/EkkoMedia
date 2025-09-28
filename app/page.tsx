@@ -1040,26 +1040,18 @@ export default function Home() {
                     </div>
 
                     {/* Performance Statistics */}
-                    <div className="grid grid-cols-3 gap-8 text-center">
+                    <div className="grid grid-cols-2 gap-8 text-center">
                       <div>
                         <div className="text-5xl md:text-6xl font-black text-white mb-2 tracking-tight">
-                          2.94M
+                          500+
                         </div>
                         <div className="text-white/80 text-sm font-medium tracking-wide">
-                          Views
+                          Creators
                         </div>
                       </div>
                       <div>
                         <div className="text-5xl md:text-6xl font-black text-white mb-2 tracking-tight">
-                          #2
-                        </div>
-                        <div className="text-white/80 text-sm font-medium tracking-wide">
-                          YouTube Trending
-                        </div>
-                      </div>
-                      <div>
-                        <div className="text-5xl md:text-6xl font-black text-white mb-2 tracking-tight">
-                          11M
+                          10M+
                         </div>
                         <div className="text-white/80 text-sm font-medium tracking-wide">
                           Hashtag Views
