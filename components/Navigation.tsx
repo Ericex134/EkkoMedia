@@ -31,13 +31,14 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg bg-white/10 backdrop-blur-sm">
               <img
                 src="/images/logo.png"
                 alt="EKKO MEDIA"
                 width={48}
                 height={48}
                 className="w-full h-full object-contain rounded-xl"
+                loading="eager"
               />
             </div>
             <div className="text-2xl font-bold text-primary-600">

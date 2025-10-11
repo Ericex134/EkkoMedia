@@ -14,6 +14,12 @@ import {
   Youtube,
 } from "lucide-react";
 import { BRANDS, FAQ_DATA } from "../lib/constants";
+import StrategyLottieAnimation from "../components/StrategyLottieAnimation";
+import PartnershipLottieAnimation from "../components/PartnershipLottieAnimation";
+import MeasurableLottieAnimation from "../components/MeasurableLottieAnimation";
+import ScalableLottieAnimation from "../components/ScalableLottieAnimation";
+import CampaignLottieAnimation from "../components/CampaignLottieAnimation";
+import PhoneAnimation from "../components/PhoneAnimation";
 
 export default function Home() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -220,17 +226,6 @@ export default function Home() {
                   >
                     <a
                       href="mailto:josh@ekkomedia.net"
-                      className="group relative inline-flex items-center bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-white font-semibold text-lg px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                    >
-                      <span className="relative z-10">Get Started</span>
-                      <ArrowRight
-                        className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform duration-300"
-                        size={20}
-                      />
-                    </a>
-
-                    <a
-                      href="mailto:josh@ekkomedia.net"
                       className="group inline-flex items-center bg-transparent border-2 border-white/40 hover:border-white/60 hover:bg-white/10 text-white/90 hover:text-white font-semibold text-lg px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
                     >
                       <span>Get Started</span>
@@ -379,7 +374,7 @@ export default function Home() {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              {/* Left Side - Single Image */}
+              {/* Left Side - Strategy Animation */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -388,14 +383,8 @@ export default function Home() {
                 className="relative"
               >
                 <div className="relative group overflow-hidden rounded-2xl aspect-[4/3]">
-                  <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-4xl font-bold">1</span>
-                      </div>
-                      <p className="text-xl font-medium">STRATEGY</p>
-                    </div>
-                  </div>
+                  {/* Strategy Lottie Animation */}
+                  <StrategyLottieAnimation />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
@@ -416,7 +405,7 @@ export default function Home() {
                     <br />
                     <span className="text-primary-500">WITH YOUR BRAND</span>
                   </h3>
-                  <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                  <p className="text-xl text-gray-600 leading-relaxed mb-8">
                     We take time to understand your goals, audience, and
                     positioning. From there, we design influencer campaigns
                     tailored to your objectives, whether that’s awareness,
@@ -467,7 +456,7 @@ export default function Home() {
                     <br />
                     <span className="text-blue-500">THAT MAKE SENSE</span>
                   </h3>
-                  <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                  <p className="text-xl text-gray-600 leading-relaxed mb-8">
                     We connect you with vetted creators who align with your
                     values and speak authentically to your audience. From micro
                     to mega, we build balanced rosters that drive both scale and
@@ -483,7 +472,7 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              {/* Left Side - Single Image */}
+              {/* Left Side - Creator Partnerships Animation */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -492,16 +481,8 @@ export default function Home() {
                 className="relative order-1 lg:order-2"
               >
                 <div className="relative group overflow-hidden rounded-2xl aspect-[4/3]">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-4xl font-bold">2</span>
-                      </div>
-                      <p className="text-xl font-medium">
-                        Scalable Partnerships
-                      </p>
-                    </div>
-                  </div>
+                  {/* Partnership Video Animation */}
+                  <PartnershipLottieAnimation />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
@@ -535,14 +516,8 @@ export default function Home() {
                 className="relative"
               >
                 <div className="relative group overflow-hidden rounded-2xl aspect-[4/3]">
-                  <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-4xl font-bold">1</span>
-                      </div>
-                      <p className="text-xl font-medium">Measurable Impact</p>
-                    </div>
-                  </div>
+                  {/* Measurable Impact Lottie Animation */}
+                  <MeasurableLottieAnimation />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
@@ -561,7 +536,7 @@ export default function Home() {
                     <br />
                     <span className="text-primary-500">YOU CAN TRUST</span>
                   </h3>
-                  <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                  <p className="text-xl text-gray-600 leading-relaxed mb-8">
                     Every campaign comes with clear reporting and insights. We
                     track ROI, engagement, and audience impact so you know
                     exactly how your budget is performing.
@@ -611,7 +586,7 @@ export default function Home() {
                     <br />
                     <span className="text-blue-500">THAT LAST</span>
                   </h3>
-                  <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                  <p className="text-xl text-gray-600 leading-relaxed mb-8">
                     We don’t just deliver one-off posts. We build pathways for
                     creators to become long-term brand ambassadors, ensuring
                     consistency and deeper trust with your customers.
@@ -635,16 +610,8 @@ export default function Home() {
                 className="relative order-1 lg:order-2"
               >
                 <div className="relative group overflow-hidden rounded-2xl aspect-[4/3]">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-4xl font-bold">2</span>
-                      </div>
-                      <p className="text-xl font-medium">
-                        Scalable Partnerships
-                      </p>
-                    </div>
-                  </div>
+                  {/* Scalable Partnerships Lottie Animation */}
+                  <ScalableLottieAnimation />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
@@ -679,14 +646,8 @@ export default function Home() {
                 className="relative"
               >
                 <div className="relative group overflow-hidden rounded-2xl aspect-[4/3]">
-                  <div className="w-full h-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-4xl font-bold">3</span>
-                      </div>
-                      <p className="text-xl font-medium">CAMPAIGN MANAGEMENT</p>
-                    </div>
-                  </div>
+                  {/* Workflow Video Animation */}
+                  <CampaignLottieAnimation />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
@@ -705,7 +666,7 @@ export default function Home() {
                     <br />
                     <span className="text-purple-500">WITHOUT THE STRESS </span>
                   </h3>
-                  <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                  <p className="text-xl text-gray-600 leading-relaxed mb-8">
                     We handle the full process: briefs, contracts, negotiations,
                     timelines, approvals, and communication. You’ll never have
                     to chase a creator or worry about a missed deadline.
@@ -827,7 +788,7 @@ export default function Home() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 relative overflow-hidden">
+        <section className="py-20 bg-white relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-5">
             <div
@@ -857,34 +818,23 @@ export default function Home() {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Left Side - Image */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="relative"
+                className="relative order-2 lg:order-1"
               >
-                <div className="relative group overflow-hidden rounded-3xl aspect-[3/4]">
-                  <div className="w-full h-full bg-gradient-to-br from-purple-900 via-purple-800 to-black flex items-center justify-center relative">
-                    {/* Simulated portrait image */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-transparent"></div>
-                    <div className="relative z-10 text-center">
-                      <div className="w-32 h-32 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
-                        <span className="text-white text-4xl font-bold">E</span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">
-                        Team Member
-                      </h3>
-                      <p className="text-purple-200">Marketing Specialist</p>
-                    </div>
+                <div className="relative group overflow-hidden rounded-3xl aspect-[4/5] max-w-md mx-auto lg:mx-0">
+                  {/* Phone Animation */}
+                  <PhoneAnimation />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                    {/* Decorative elements */}
-                    <div className="absolute top-6 right-6 w-16 h-16 border-2 border-white/20 rounded-lg rotate-45 animate-pulse"></div>
-                    <div className="absolute bottom-6 left-6 w-8 h-8 bg-purple-400/30 rounded-full animate-bounce delay-1000"></div>
-                  </div>
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Decorative elements */}
+                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-100 rounded-full opacity-20"></div>
+                  <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-100 rounded-full opacity-15"></div>
                 </div>
               </motion.div>
 
@@ -894,7 +844,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="space-y-4"
+                className="space-y-4 order-1 lg:order-2"
               >
                 {FAQ_DATA.map((faq, index) => (
                   <motion.div

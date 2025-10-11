@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Users, Target, Globe, TrendingUp } from "lucide-react";
+import RocketAnimation from "../../components/RocketAnimation";
 
 export default function About() {
   const values = [
@@ -130,8 +131,7 @@ export default function About() {
               viewport={{ once: true }}
               className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed"
             >
-              Discover the journey that made Ekko Media the go-to influencer
-              agency for{" "}
+              Discover the what made Ekko Media the go-to influencer agency for{" "}
               <span className="text-cyan-300 font-semibold">
                 audience engagement
               </span>{" "}
@@ -148,7 +148,7 @@ export default function About() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-blue-100 to-blue-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -156,6 +156,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="order-2 lg:order-1"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Our Mission
@@ -186,16 +187,18 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative order-1 lg:order-2"
             >
-              <div className="w-full h-96 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center">
-                <div className="text-white text-center">
-                  <Users size={80} className="mx-auto mb-4 opacity-80" />
-                  <p className="text-xl font-semibold">Our Mission Visual</p>
-                </div>
+              <div className="w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
+                {/* Rocket Animation */}
+                <RocketAnimation />
               </div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary-100 rounded-full opacity-20"></div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary-200 rounded-full opacity-10"></div>
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-100 rounded-full opacity-30"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-cyan-100 rounded-full opacity-20"></div>
+
+              {/* Additional decorative elements */}
+              <div className="absolute top-8 right-8 w-16 h-16 border-2 border-blue-200 rounded-lg rotate-45 animate-pulse opacity-40"></div>
+              <div className="absolute bottom-8 left-8 w-8 h-8 bg-blue-300 rounded-full animate-bounce delay-1000 opacity-30"></div>
             </motion.div>
           </div>
         </div>

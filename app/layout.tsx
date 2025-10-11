@@ -9,6 +9,11 @@ export const metadata: Metadata = {
     "Trusted by leading brands to connect them with world-class creators and creative that men trust.",
   keywords:
     "influencer marketing, social media, content creation, brand partnerships, male audience engagement",
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({

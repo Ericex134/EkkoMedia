@@ -44,35 +44,10 @@ const Footer = () => {
               </div>
               <span className="text-3xl font-bold text-white">EKKO MEDIA</span>
             </div>
-
-            {/* Social Media Icons */}
-            <div className="flex space-x-4">
-              {[
-                { icon: Instagram, href: "#" },
-                { icon: Twitter, href: "#" },
-                { icon: Facebook, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Youtube, href: "#" },
-              ].map((social, index) => (
-                <Link
-                  key={index}
-                  href={social.href}
-                  className="w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 transform hover:scale-110"
-                >
-                  <social.icon size={20} className="text-white" />
-                </Link>
-              ))}
-            </div>
           </div>
 
           {/* Right Side - Navigation Links */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* EXPLORE */}
-            <div>
-              <h3 className="text-white font-bold text-lg mb-4">EXPLORE</h3>
-              <ul className="space-y-3"></ul>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
             {/* CONNECT */}
             <div>
               <h3 className="text-white font-bold text-lg mb-4">CONNECT</h3>
@@ -92,37 +67,6 @@ const Footer = () => {
                   >
                     Contact Us
                   </a>
-                </li>
-                <li>
-                  <Link
-                    href="/careers"
-                    className="text-white/80 hover:text-white transition-colors duration-300"
-                  >
-                    Careers
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* LEGAL */}
-            <div>
-              <h3 className="text-white font-bold text-lg mb-4">LEGAL</h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="/privacy"
-                    className="text-white/80 hover:text-white transition-colors duration-300"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/terms"
-                    className="text-white/80 hover:text-white transition-colors duration-300"
-                  >
-                    Terms of Service
-                  </Link>
                 </li>
               </ul>
             </div>
