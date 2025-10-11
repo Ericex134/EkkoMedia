@@ -57,7 +57,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <a href="/contact" className="btn-primary">
+            <a href="mailto:josh@ekkomedia.net" className="btn-primary">
               Contact Us
             </a>
           </div>
